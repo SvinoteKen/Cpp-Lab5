@@ -29,7 +29,7 @@ int main()
         while (substr != 0) {
             std::string word = substr;
             std::transform(word.begin(), word.end(), word.begin(), ::tolower);
-            auto founded = map.find(word);
+            std::map<std::string, int>::iterator founded = map.find(word);
             if (founded == map.cend()) {
                 map.insert(std::make_pair(word, 1));
             }
